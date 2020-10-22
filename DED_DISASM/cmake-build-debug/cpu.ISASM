@@ -1,0 +1,9 @@
+ADD 
+MUL 
+DIV 
+ADD 
+PUSH 345.12
+PUSH rax
+PUSH 123.14
+POP 
+POP 
