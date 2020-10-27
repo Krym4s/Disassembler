@@ -22,36 +22,12 @@ int translateIsE_ByteCodeToASM (char* IsE_Bytecode, const int Members, char** as
 
         switch (commandCode)
         {
-            #define DEF_CPU(name,value,nParams,instructions) case value: \
+            #define DEF_CPU(name,value,nParams,instructions,readArgInstruction,writeDisAsmInstruction) case value: \
                                                                 strcat(*assemblerCode, #name); \
-                                                                strcat(*assemblerCode, " ");\
-                                                                if (nParams == 1)  \
-                                                                {        \
-                                                                    char mode = IsE_Bytecode[i++]; \
-                                                                    if (mode == 1)            \
-                                                                    {\
-                                                                        char reg = IsE_Bytecode[i++]; \
-                                                                        switch (reg) {\
-                                                                            case rax:         \
-                                                                                strcat(*assemblerCode, "rax"); break; \
-                                                                            case rbx:             \
-                                                                                strcat(*assemblerCode, "rbx"); break;\
-                                                                            case rcx:             \
-                                                                                strcat(*assemblerCode, "rcx"); break;\
-                                                                            case rdx:             \
-                                                                                strcat(*assemblerCode, "rdx"); break;\
-                                                                        }\
-                                                                    } else if (!strcmp(#name, "PUSH"))\
-                                                                    {    \
-                                                                        double* dValue =(double*) (IsE_Bytecode + i);     \
-                                                                        i += 8;                \
-                                                                        char strValue[20] = {};\
-                                                                        sprintf (strValue, "%lg", *dValue);            \
-                                                                        strcat (*assemblerCode, strValue);\
-                                                                        \
-                                                                    }    \
-                                                                    \
-                                                                    \
+                                                                strcat(*assemblerCode, " ");   \
+                                                                if (nParams == 1)              \
+                                                                {                              \
+                                                                    writeDisAsmInstruction     \
                                                                 }strcat (*assemblerCode, "\n");\
                                                                 break;
 
@@ -59,11 +35,22 @@ int translateIsE_ByteCodeToASM (char* IsE_Bytecode, const int Members, char** as
             #include "C:\Users\egolg\CLionProjects\DED_ASM\cmake-build-debug\data\processor_commit.IsCPU"
 
             default:
-                printf("problems %d %d", i, commandCode);
+                printf("problems %x %x", i, commandCode);
             #undef DEF_CPU
         }
     }
     *nChars = strchr (*assemblerCode, '\0') - *assemblerCode;
     return NO_ERRORS;
+}
+
+int findReg (char** answerLine, int regN)
+{
+#define DEF_REG(name,value) case value: strcat (*answerLine, #name); break;
+    switch (regN)
+    {
+#include "C:\Users\egolg\CLionProjects\DED_ASM\cmake-build-debug\data\registers.IsCPU"
+
+        default: strcat (*answerLine, "There is no such register\n");
+    }
 }
 

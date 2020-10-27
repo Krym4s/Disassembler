@@ -17,7 +17,7 @@ int readToStorage (const char* fileName, char** storage)
 {
     assert (fileName != NULL);
 
-    FILE* input = fopen (fileName, "rt");
+    FILE* input = fopen (fileName, "rb");
 
     if (input == NULL)
        return NULL_ARGUMENT;

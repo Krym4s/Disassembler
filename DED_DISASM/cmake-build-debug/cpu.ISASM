@@ -1,9 +1,139 @@
+IN 
+POP rax
+IN 
+POP rbx
+IN 
+POP rcx
+CALL 215
+CALL -1
+POP rdx
+PUSH rdx
+PUSH -1
+JE 435
+PUSH rdx
+PUSH 0
+JE 448
+PUSH rdx
+PUSH 1
+JE 461
+PUSH rdx
+PUSH 2
+JE 475
+PUSH rdx
+PUSH 3
+JE 490
+PUSH 4
+OUT 
+HLT 
+HLT 
+HLT 
+PUSH rbx
+PUSH 0
+JE 172
+JE -1
+PUSH rcx
+NEG 
+PUSH rbx
+DIV 
+PUSH 1
+RET 
+RET 
+PUSH rcx
+PUSH 0
+JE 202
+PUSH -1
+RET 
+RET 
+PUSH 3
+RET 
+RET 
+RET 
+PUSH rax
+PUSH 0
+JE 129
+JE -1
+PUSH rbx
+PUSH 2
+POW 
+PUSH 4
+PUSH rax
+PUSH rcx
+MUL 
+MUL 
+SUB 
+POP rdx
+PUSH rdx
+PUSH 0
+JB 423
+JB -1
+PUSH rdx
+PUSH 0
+JE 392
+JE -1
+PUSH rdx
+SQRT 
+POP rdx
+PUSH rbx
+NEG 
+PUSH rdx
 ADD 
+PUSH 2
+PUSH rax
 MUL 
 DIV 
+DIV 
+PUSH rbx
+NEG 
+PUSH rdx
+NEG 
 ADD 
-PUSH 345.12
+PUSH 2
 PUSH rax
-PUSH 123.14
-POP 
-POP 
+MUL 
+DIV 
+DIV 
+PUSH 2
+PUSH There is no such register
+
+RET 
+RET 
+RET 
+PUSH rbx
+NEG 
+PUSH 2
+PUSH rax
+MUL 
+DIV 
+PUSH 1
+RET 
+RET 
+PUSH -1
+RET 
+RET 
+PUSH -1
+OUT 
+HLT 
+HLT 
+PUSH 0
+OUT 
+HLT 
+HLT 
+PUSH 1
+OUT 
+OUT 
+HLT 
+HLT 
+PUSH 2
+OUT 
+OUT 
+OUT 
+HLT 
+HLT 
+PUSH 3
+OUT 
+HLT 
+HLT 
+HLT 
+HLT 
+HLT 
+HLT 

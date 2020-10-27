@@ -6,33 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/egolg/CLionProjects/DED_ASM/cmake-build-debug/data/processor_commit.IsCPU
-
-C:/Users/egolg/CLionProjects/DED_ASM/cmake-build-debug/data/registers.IsCPU
-
-C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_Disassembler.cpp
-IsE_Disassembler.h
-C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_Disassembler.h
-C:/Users/egolg/CLionProjects/DED_ASM/cmake-build-debug/data/processor_commit.IsCPU
--
-
-C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_Disassembler.h
+C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_text.cpp
 IsE_text.h
 C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_text.h
-IsE_Stack.h
-C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_Stack.h
-C:/Users/egolg/CLionProjects/DED_ASM/cmake-build-debug/data/registers.IsCPU
--
-
-C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_Stack.h
-stdio.h
--
-stdlib.h
--
-math.h
--
-assert.h
--
 
 C:/Users/egolg/CLionProjects/DED_DISASM/cmake-build-debug/IsE_text.h
 stdio.h

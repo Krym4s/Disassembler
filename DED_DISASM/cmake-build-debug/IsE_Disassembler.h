@@ -27,4 +27,6 @@ int readIsE_ByteCode (const char* filename, char** storage, int* nMembers);
 
 int translateIsE_ByteCodeToASM (char* IsE_Bytecode, const int Members, char** assemblerCode, size_t* nChars);
 
+int findReg (char** answerLine, int regN);
+
 #endif //DED_DISASM_ISE_DISASSMEBLER_H
